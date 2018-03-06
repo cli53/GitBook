@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-// import Badge from './components/Badge.jsx';
-// import RepoList from './components/RepoList.jsx';
+import Badge from './components/Badge.jsx';
+import RepoList from './components/RepoList.jsx';
 import Search from './components/Search.jsx';
 import logo from './logo.svg';
 import './App.css';
@@ -12,26 +12,19 @@ class App extends Component {
       userName: '',
       userRepos: [],
       userBadgeInfo: {},
+      showRepos: false,
     }
   }
-
-  // componentDidMount() {
-  //    const fetchAsync = async () => {
-  //     let data = await (await(fetch('https://api.github.com/users/cli53'))).json();
-  //     console.log(data);
-  //   }
-  //   fetchAsync();
-  // }
-
     handleUserName = (event) => {
-    console.log(this.state.userName)
     this.setState({userName: event.target.value})
-    
+  }
+
+  showRepos = () => {
+    this.setState({showRepos: !this.state.showRepos});
   }
 
   fetchUserInfo = async (event) => {
     event.preventDefault();
-    console.log('fetch hit')
     const userName = this.state.userName 
       let userBadgeInfo = await (await(fetch(`https://api.github.com/users/${userName}`))).json();
       let userRepos = await (await(fetch(`https://api.github.com/users/${userName}/repos`))).json();
@@ -39,14 +32,20 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.handleUserName)
+    const userName = this.state.userName;
+    const userBadgeInfo = this.state.userBadgeInfo;
+    const userRepos = this.state.userRepos;
+    const showBadge = Object.keys(userBadgeInfo).length;
+    const showRepos = this.state.showRepos;
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <Search handleUserName={this.handleUserName} fetchUserInfo={this.fetchUserInfo}/>
+        <Search handleUserName={this.handleUserName} fetchUserInfo={this.fetchUserInfo} userName={userName} />
+        {showBadge > 0 && <Badge showRepos={this.showRepos} userBadgeInfo={userBadgeInfo} />}
+        {showRepos && <RepoList userRepos={userRepos} />}
       </div>
     );
   }
