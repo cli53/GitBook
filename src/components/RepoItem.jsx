@@ -7,7 +7,7 @@ const RepoItem = ({ repoInfo }) => {
     : stars } = repoInfo
   console.log('REPOINFO', repoInfo)
   return (
-    <Card>
+    <Card id="card" style={{textAlign: 'center'}}>
       <CardHeader
       title={name}
       subtitle={description}
@@ -21,14 +21,6 @@ const RepoItem = ({ repoInfo }) => {
       {`Forks: ${forks} | Size: ${RepoSize}kb`}
     </CardText>
     </Card>
-    // <article>
-    //   <h3>{name}</h3>
-    //   <p>{description}</p>
-    //   <p>{gitUrl}</p>
-    //   <p>{forks}</p>
-    //   <p>{issues}</p>
-    //   <p>{RepoSize}</p>
-    // </article>
   ) 
 }
  

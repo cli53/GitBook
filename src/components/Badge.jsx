@@ -5,10 +5,10 @@ import FontIcon from 'material-ui/FontIcon';
 const Badge = ({ userBadgeInfo, showRepos }) => {
   // User Profile Image, Name, Number of Followers, Number of people Following
   const {avatar_url, name, followers, following, url, location, bio} = userBadgeInfo;
-  console.log(url)
+
   const style = {
    paper:{ 
-    height: 300,
+    height: 400,
     width: 300,
     margin: 20,
     textAlign: 'center',
@@ -20,36 +20,25 @@ const Badge = ({ userBadgeInfo, showRepos }) => {
      width: 100,
      borderRadius: 50,
    },
-   button: {
-     margin: 16,
+  //  button: {
+  //    display: 'absolute',
+  //    marginTop: 15,
+  //  },
+   bio: {
+     color:"#757575",
    }
   };
-  const card = () => ( 
-  <div>
-  <a href={url} target="_blank">
-  <img src={avatar_url} alt="Profile Picture"/>
-  </a>
-  <h1>{name}</h1>
-  <p>{`Followers: ${followers}`}</p>
-  <p>{`Following: ${following}`}</p>
-  <RaisedButton
-      href="https://github.com/callemall/material-ui"
-      target="_blank"
-      label="Github Link"
-      secondary={true}
-      style={style.button}
-      icon={<FontIcon className="muidocs-icon-custom-github" />}
-      onClick={showRepos}
-    />
-  </div>
-  )
-  
+
 
   return (
         <div>
         <Paper style={style.paper} zDepth={1}>
+        <a href={url}>
         <img src={avatar_url} style={style.img}/>
+        </a>
         <h1>{name}</h1>
+        <p style={style.bio}>{location}</p>
+        <p style={style.bio}>{bio}</p>
         <p>{`Followers: ${followers}`}</p>
         <p>{`Following: ${following}`}</p>
         {/* <button onClick={showRepos}>Fetch Repos</button> */}
@@ -57,7 +46,7 @@ const Badge = ({ userBadgeInfo, showRepos }) => {
           target="_blank"
           label="Github Link"
           secondary={true}
-          style={style.button}
+          // style={style.button}
           icon={<FontIcon className="muidocs-icon-custom-github" />}
           onClick={showRepos}
         />
