@@ -11,18 +11,18 @@ class App extends Component {
       userName: '',
       userRepos: [],
       userBadgeInfo: {},
+      history: [],
       showRepos: false,
+      openDrawer: false,
     }
   }
 
-    handleUserName = (event) => {
-    this.setState({userName: event.target.value})
-    console.log(this.state.userName)
-  }
+    handleUserName = (event) => this.setState({userName: event.target.value});
 
-  showRepos = () => {
-    this.setState({showRepos: !this.state.showRepos});
-  }
+  handleDrawer = () => this.setState({openDrawer: !this.state.openDrawer})
+
+  showRepos = () => this.setState({showRepos: !this.state.showRepos});
+  
 
   fetchUserInfo = async (event) => {
     event.preventDefault();
@@ -30,11 +30,7 @@ class App extends Component {
       let userBadgeInfo = await (await(fetch(`https://api.github.com/users/${userName}`))).json();
       let userRepos = await (await(fetch(`https://api.github.com/users/${userName}/repos`))).json();
        console.log(userRepos)
-      this.setState({ userBadgeInfo, userRepos });
-  }
-
-  handleGitHubUrl = (url) => {
-    return window.location = url;
+      this.setState({ userBadgeInfo, userRepos, history: this.state.history.concat(userName) });
   }
 
   render() {
@@ -44,9 +40,11 @@ class App extends Component {
     const userRepos = this.state.userRepos;
     const showBadge = Object.keys(userBadgeInfo).length;
     const showRepos = this.state.showRepos;
+    const openDrawer = this.state.openDrawer;
+    const history = this.state.history;
     return (
       <div className="App">
-        <Header handleUserName={this.handleUserName} fetchUserInfo={this.fetchUserInfo} userName={userName} userPic={userPic}/>
+        <Header history={history} handleUserName={this.handleUserName} handleDrawer={this.handleDrawer} openDrawer={openDrawer }fetchUserInfo={this.fetchUserInfo} userName={userName} userPic={userPic}/>
         {/* <Search handleUserName={this.handleUserName} fetchUserInfo={this.fetchUserInfo} userName={userName} /> */}
         {showBadge > 0 && <Badge showRepos={this.showRepos} userBadgeInfo={userBadgeInfo} />}
         {showRepos && <RepoList userRepos={userRepos} />}
