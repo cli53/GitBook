@@ -1,3 +1,16 @@
+/*
+ * File: App.js
+ * Project: part-two
+ * File Created: Tuesday, 6th March 2018 12:59:13 am
+ * Author: Chris Li
+ * -----
+ * Last Modified: Wednesday, 7th March 2018 11:23:53 am
+ * Modified By: Chris Li
+ * -----
+ * Copyright 2018 - 2018 cli53, Personal
+ */
+
+
 import React, { Component } from 'react';
 import Header from './components/Header.jsx';
 import Badge from './components/Badge.jsx';
@@ -36,7 +49,6 @@ class App extends Component {
     const userName = this.state.userName 
       let userBadgeInfo = await (await(fetch(`https://api.github.com/users/${userName}`))).json();
       let userRepos = await (await(fetch(`https://api.github.com/users/${userName}/repos`))).json();
-       console.log(userRepos)
       this.setState({ userBadgeInfo, userRepos, history: this.state.history.concat(userName) });
   }
 

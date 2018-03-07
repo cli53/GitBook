@@ -1,3 +1,16 @@
+/*
+ * File: Header.jsx
+ * Project: part-two
+ * File Created: Tuesday, 6th March 2018 3:29:28 pm
+ * Author: Chris Li
+ * -----
+ * Last Modified: Wednesday, 7th March 2018 11:23:10 am
+ * Modified By: Chris Li
+ * -----
+ * Copyright 2018 - 2018 cli53, Personal
+ */
+
+
 import React from 'react';
 import IconButton from 'material-ui/IconButton';
 import Menu from 'material-ui/svg-icons/navigation/menu';
@@ -49,7 +62,7 @@ const Header = ({handleUserName, userName, fetchUserInfo, userPic, handleDrawer,
     />
     </ToolbarGroup>
     </Toolbar>
-  )
+  );
 }
  
 export default Header;

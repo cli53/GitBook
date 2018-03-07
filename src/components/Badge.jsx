@@ -1,3 +1,16 @@
+/*
+ * File: Badge.jsx
+ * Project: part-two
+ * File Created: Tuesday, 6th March 2018 1:11:41 am
+ * Author: Chris Li
+ * -----
+ * Last Modified: Wednesday, 7th March 2018 11:23:34 am
+ * Modified By: Chris Li
+ * -----
+ * Copyright 2018 - 2018 cli53, Personal
+ */
+
+
 import React from 'react';
 import Paper from 'material-ui/Paper';
 import RaisedButton from 'material-ui/RaisedButton';

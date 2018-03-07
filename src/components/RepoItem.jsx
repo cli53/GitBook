@@ -1,3 +1,16 @@
+/*
+ * File: RepoItem.jsx
+ * Project: part-two
+ * File Created: Tuesday, 6th March 2018 2:18:57 pm
+ * Author: Chris Li
+ * -----
+ * Last Modified: Wednesday, 7th March 2018 11:24:08 am
+ * Modified By: Chris Li
+ * -----
+ * Copyright 2018 - 2018 cli53, Personal
+ */
+
+
 import React from 'react';
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
