@@ -17,6 +17,7 @@ import FlatButton from 'material-ui/FlatButton';
 import IconButton from 'material-ui/IconButton';
 import Stars from 'material-ui/svg-icons/action/stars';
 import { yellow500 } from 'material-ui/styles/colors';
+
 // Name, Description, Git URL, Number of Stars, Forks Count, Number of Open Issues, Repository Size
 const RepoItem = ({ repoInfo }) => {
   const { name, 

@@ -14,6 +14,7 @@
 import React from 'react';
 import Paper from 'material-ui/Paper';
 import RaisedButton from 'material-ui/RaisedButton';
+
 const Badge = ({ userBadgeInfo, showRepos }) => {
   // User Profile Image, Name, Number of Followers, Number of people Following
   const { avatar_url, 

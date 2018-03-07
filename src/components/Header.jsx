@@ -16,7 +16,6 @@ import IconButton from 'material-ui/IconButton';
 import Menu from 'material-ui/svg-icons/navigation/menu';
 import Avatar from 'material-ui/Avatar';
 import Drawer from './Drawer.jsx';
-
 import Search from './Search.jsx';
 import {Toolbar, ToolbarGroup, ToolbarTitle} from 'material-ui/Toolbar';
 
