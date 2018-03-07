@@ -6,7 +6,6 @@ import Avatar from 'material-ui/Avatar';
 import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from 'material-ui/Toolbar';
 
 const Header = ({handleUserName, userName, fetchUserInfo, userPic}) => {
-console.log(userPic)
   const style = {
     header: {
       backgroundColor: '#00B4CE',
@@ -28,12 +27,15 @@ console.log(userPic)
     },
     avatar: {
       marginRight: '10px',
+    },
+    menu: {
+      color: '#fff',
     }
   }
  return ( 
     <Toolbar style={style.header}>
     <ToolbarGroup firstChild={true}>
-    <IconButton><Menu /></IconButton>
+    <IconButton style={style.menu}><Menu /></IconButton>
     <ToolbarTitle text="GitBook" style={style.title}/>
     </ToolbarGroup>
     <ToolbarGroup>

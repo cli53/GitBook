@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Header from './components/Header.jsx';
 import Badge from './components/Badge.jsx';
 import RepoList from './components/RepoList.jsx';
-import Search from './components/Search.jsx';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -16,6 +14,7 @@ class App extends Component {
       showRepos: false,
     }
   }
+
     handleUserName = (event) => {
     this.setState({userName: event.target.value})
     console.log(this.state.userName)
@@ -30,7 +29,7 @@ class App extends Component {
     const userName = this.state.userName 
       let userBadgeInfo = await (await(fetch(`https://api.github.com/users/${userName}`))).json();
       let userRepos = await (await(fetch(`https://api.github.com/users/${userName}/repos`))).json();
-      console.log(userBadgeInfo)
+       console.log(userRepos)
       this.setState({ userBadgeInfo, userRepos });
   }
 

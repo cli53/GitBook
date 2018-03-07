@@ -4,7 +4,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import FontIcon from 'material-ui/FontIcon';
 const Badge = ({ userBadgeInfo, showRepos }) => {
   // User Profile Image, Name, Number of Followers, Number of people Following
-  const {avatar_url, name, followers, following, url, location, bio} = userBadgeInfo;
+  const {avatar_url, name, followers, following, html_url: url, location, bio} = userBadgeInfo;
 
   const style = {
    paper:{ 
@@ -20,10 +20,6 @@ const Badge = ({ userBadgeInfo, showRepos }) => {
      width: 100,
      borderRadius: 50,
    },
-  //  button: {
-  //    display: 'absolute',
-  //    marginTop: 15,
-  //  },
    bio: {
      color:"#757575",
    }
@@ -33,7 +29,7 @@ const Badge = ({ userBadgeInfo, showRepos }) => {
   return (
         <div>
         <Paper style={style.paper} zDepth={1}>
-        <a href={url}>
+        <a href={url} target="_blank">
         <img src={avatar_url} style={style.img}/>
         </a>
         <h1>{name}</h1>
