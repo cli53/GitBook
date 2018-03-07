@@ -5,8 +5,8 @@ import MenuItem from 'material-ui/MenuItem';
 const MenuList = ({ history }) => {
    const listItem = history.map((user, i) => {
     return <MenuItem checked={true} key={i}>{user}</MenuItem>
-  })
-  return listItem
+  });
+  return listItem;
 }
  
 export default MenuList;

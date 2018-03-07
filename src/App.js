@@ -17,11 +17,18 @@ class App extends Component {
     }
   }
 
-    handleUserName = (event) => this.setState({userName: event.target.value});
+  handleUserName = (event) => {
+    const value = event.target.value;
+    return this.setState({userName: value });
+  };
 
-  handleDrawer = () => this.setState({openDrawer: !this.state.openDrawer})
+  handleDrawer = () => this.setState(prevState => {
+   return { openDrawer: !prevState.openDrawer }
+  });
 
-  showRepos = () => this.setState({showRepos: !this.state.showRepos});
+  showRepos = () => this.setState(prevState => {
+    return {showRepos: !prevState.showRepos}
+  });
   
 
   fetchUserInfo = async (event) => {
@@ -45,7 +52,6 @@ class App extends Component {
     return (
       <div className="App">
         <Header history={history} handleUserName={this.handleUserName} handleDrawer={this.handleDrawer} openDrawer={openDrawer }fetchUserInfo={this.fetchUserInfo} userName={userName} userPic={userPic}/>
-        {/* <Search handleUserName={this.handleUserName} fetchUserInfo={this.fetchUserInfo} userName={userName} /> */}
         {showBadge > 0 && <Badge showRepos={this.showRepos} userBadgeInfo={userBadgeInfo} />}
         {showRepos && <RepoList userRepos={userRepos} />}
       </div>

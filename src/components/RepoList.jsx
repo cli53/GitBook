@@ -7,7 +7,7 @@ const RepoList = ({ userRepos }) => {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center'
-  }
+  };
   const repos = userRepos.map((repo, index) => (
      <RepoItem repoInfo={repo} key={index}/>
   ));
@@ -16,7 +16,7 @@ const RepoList = ({ userRepos }) => {
     <ul id="repo-list" style={style}>
     {repos}
     </ul>
-  )
+  );
 }
  
 export default RepoList;
