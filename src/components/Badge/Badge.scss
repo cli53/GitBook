@@ -1,3 +1,8 @@
+:root {
+  --primary-ft-color: #333;
+  --secondary-ft-color:rgb(121, 105, 105);
+}
+  
   .paper { 
    height: 400px;
    width: 300px;
@@ -13,6 +18,10 @@
     border-radius: 50px;
   } 
   .bio {
-    color :#757575;
+    color: var(--secondary-ft-color);
+  }
+
+  .name {
+    color: var(--primary-ft-color);
   }
  

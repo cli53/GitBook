@@ -32,7 +32,7 @@ const Badge = ({ userBadgeInfo, showRepos }) => {
         <a href={url} target="_blank">
         <img src={avatar_url} className={styles.img} alt="paper card repos"/>
         </a>
-        <h1>{name}</h1>
+        <h1 className={styles.name}>{name}</h1>
         <p className={styles.bio}>{location}</p>
         <p className={styles.bio}>{bio}</p>
         <p>{`Followers: ${followers}`}</p>
