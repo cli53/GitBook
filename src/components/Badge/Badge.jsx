@@ -14,6 +14,7 @@
 import React from 'react';
 import Paper from 'material-ui/Paper';
 import RaisedButton from 'material-ui/RaisedButton';
+import styles from './Badge.scss';
 
 const Badge = ({ userBadgeInfo, showRepos }) => {
   // User Profile Image, Name, Number of Followers, Number of people Following
@@ -25,39 +26,20 @@ const Badge = ({ userBadgeInfo, showRepos }) => {
           location, 
           bio } = userBadgeInfo;
 
-  const style = {
-   paper:{ 
-    height: 400,
-    width: 300,
-    margin: 20,
-    textAlign: 'center',
-    display: 'inline-block',
-   },
-   img: {
-     marginTop: 10,
-     height:100,
-     width: 100,
-     borderRadius: 50,
-   },
-   bio: {
-     color:"#757575",
-   }
-  };
-
   return (
         <div>
-        <Paper style={style.paper} zDepth={1}>
+        <Paper className={styles.paper}  zDepth={1}>
         <a href={url} target="_blank">
-        <img src={avatar_url} style={style.img} alt="paper card repos"/>
+        <img src={avatar_url} className={styles.img} alt="paper card repos"/>
         </a>
         <h1>{name}</h1>
-        <p style={style.bio}>{location}</p>
-        <p style={style.bio}>{bio}</p>
+        <p className={styles.bio}>{location}</p>
+        <p className={styles.bio}>{bio}</p>
         <p>{`Followers: ${followers}`}</p>
         <p>{`Following: ${following}`}</p>
         <RaisedButton
           target="_blank"
-          label="Github Link"
+          label="Repos"
           secondary={true}
           onClick={showRepos}
         />

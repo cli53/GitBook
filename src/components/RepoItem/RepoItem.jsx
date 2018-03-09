@@ -17,7 +17,7 @@ import FlatButton from 'material-ui/FlatButton';
 import IconButton from 'material-ui/IconButton';
 import Stars from 'material-ui/svg-icons/action/stars';
 import { yellow500 } from 'material-ui/styles/colors';
-
+import styles from './RepoItem.scss';
 // Name, Description, Git URL, Number of Stars, Forks Count, Number of Open Issues, Repository Size
 const RepoItem = ({ repoInfo }) => {
   const { name, 
@@ -29,11 +29,7 @@ const RepoItem = ({ repoInfo }) => {
           stargazers_count: stars 
         } = repoInfo;
 
-    const style ={
-      card: {
-        width: 500,
-        margin: 20,
-      },
+    const inlineStyle ={
       title: {
         marginLeft: 45,
         fontSize: 20
@@ -44,14 +40,13 @@ const RepoItem = ({ repoInfo }) => {
     };
     
   return (
-    <Card id="card" style={style.card}>
+    <Card id="card" className={styles.card}>
       <CardHeader
       title={name}
-      style={style.title}
-      titleStyle={style.title}
+      titleStyle={inlineStyle.title}
       subtitle={description}
-      subtitleStyle={style.title}
-      textStyle={style.text}
+      subtitleStyle={inlineStyle.title}
+      textStyle={inlineStyle.text}
       actAsExpander={true}
       showExpandableButton={true}
       />

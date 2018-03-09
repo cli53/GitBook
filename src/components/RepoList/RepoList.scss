@@ -1,0 +1,17 @@
+/*
+ * File: RepoList.scss
+ * Project: part-two
+ * File Created: Friday, 9th March 2018 12:19:56 am
+ * Author: Chris Li
+ * -----
+ * Last Modified: Friday, 9th March 2018 12:19:59 am
+ * Modified By: Chris Li
+ * -----
+ * Copyright 2018 - 2018 cli53, Personal
+ */
+
+ .repoList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }

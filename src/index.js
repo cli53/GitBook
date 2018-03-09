@@ -13,8 +13,8 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import Application from './App';
+import './index.scss';
+import Application from './App/App';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import registerServiceWorker from './registerServiceWorker';
 
