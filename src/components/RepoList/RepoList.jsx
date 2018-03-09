@@ -11,21 +11,17 @@
  */
 
 import React from 'react';
-import RepoItem from "./RepoItem";
+import RepoItem from "../RepoItem/RepoItem.jsx";
+import styles from './RepoList.scss';
 
 const RepoList = ({ userRepos }) => {
-  const style ={
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center'
-  };
+
   const repos = userRepos.map((repo, index) => (
      <RepoItem repoInfo={repo} key={index}/>
   ));
   
   return (
-    <ul id="repo-list" style={style}>
+    <ul id="repo-list" className={styles.repoList}>
     {repos}
     </ul>
   );

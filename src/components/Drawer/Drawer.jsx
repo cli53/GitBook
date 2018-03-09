@@ -13,7 +13,7 @@
 
 import React from 'react'
 import Drawers from 'material-ui/Drawer';
-import MenuList from './MenuList.jsx';
+import MenuList from '../MenuList/MenuList.jsx';
 
 const Drawer = ({ openDrawer, history }) => (
     <Drawers open={openDrawer} width={200} docked={false}>

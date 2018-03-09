@@ -10,11 +10,23 @@
  * Copyright 2018 - 2018 cli53, Personal
  */
 
+/*
+ * File: App.js
+ * Project: part-two
+ * File Created: Tuesday, 6th March 2018 12:59:13 am
+ * Author: Chris Li
+ * -----
+ * Last Modified: Friday, 9th March 2018 12:16:52 am
+ * Modified By: Chris Li
+ * -----
+ * Copyright 2018 - 2018 cli53, Personal
+ */
+
 
 import React, { Component } from 'react';
-import Header from '../components/Header.jsx';
-import Badge from '../components/Badge.jsx';
-import RepoList from '../components/RepoList.jsx';
+import Header from '../components/Header/Header.jsx';
+import Badge from '../components/Badge/Badge.jsx';
+import RepoList from '../components/RepoList/RepoList.jsx';
 import styles from './App.scss';
 
 console.log(styles)

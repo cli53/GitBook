@@ -1,0 +1,28 @@
+/*
+ * File: Header.scss
+ * Project: part-two
+ * File Created: Thursday, 8th March 2018 11:11:49 pm
+ * Author: Chris Li
+ * -----
+ * Last Modified: Friday, 9th March 2018 12:16:24 am
+ * Modified By: Chris Li
+ * -----
+ * Copyright 2018 - 2018 cli53, Personal
+ */
+
+
+/* Only using !important to override the UI libraries implementation of inline styles on every component, recommended from the library's documentation. */
+.header {
+  background-color: rgb(0, 180, 206)!important;
+}
+
+.title {
+  color:#fff!important;
+}
+
+.avatar {
+  margin-right: 10px;
+}
+.menu {
+  color: #fff;
+}
