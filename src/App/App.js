@@ -12,10 +12,12 @@
 
 
 import React, { Component } from 'react';
-import Header from './components/Header.jsx';
-import Badge from './components/Badge.jsx';
-import RepoList from './components/RepoList.jsx';
-import './App.scss';
+import Header from '../components/Header.jsx';
+import Badge from '../components/Badge.jsx';
+import RepoList from '../components/RepoList.jsx';
+import styles from './App.scss';
+
+console.log(styles)
 
 class App extends Component {
   constructor(props){
@@ -66,7 +68,7 @@ class App extends Component {
     const history = this.state.history;
 
     return (
-      <div className="App">
+      <div className={styles.app}>
         <Header history={history} handleUserName={this.handleUserName} handleDrawer={this.handleDrawer} openDrawer={openDrawer }fetchUserInfo={this.fetchUserInfo} userName={userName} userPic={userPic}/>
         {showBadge > 0 && <Badge showRepos={this.showRepos} userBadgeInfo={userBadgeInfo} />}
         {showRepos && <RepoList userRepos={userRepos} />}
