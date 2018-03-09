@@ -15,7 +15,7 @@ import React, { Component } from 'react';
 import Header from './components/Header.jsx';
 import Badge from './components/Badge.jsx';
 import RepoList from './components/RepoList.jsx';
-import './App.css';
+import './App.scss';
 
 class App extends Component {
   constructor(props){
