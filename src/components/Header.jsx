@@ -20,6 +20,7 @@ import Search from './Search.jsx';
 import {Toolbar, ToolbarGroup, ToolbarTitle} from 'material-ui/Toolbar';
 
 const Header = ({handleUserName, userName, fetchUserInfo, userPic, handleDrawer, openDrawer, history}) => {
+
   const style = {
     header: {
       backgroundColor: '#00B4CE',

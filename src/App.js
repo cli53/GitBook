@@ -47,8 +47,11 @@ class App extends Component {
   fetchUserInfo = async (event) => {
     event.preventDefault();
     const userName = this.state.userName 
+
       let userBadgeInfo = await (await(fetch(`https://api.github.com/users/${userName}`))).json();
+
       let userRepos = await (await(fetch(`https://api.github.com/users/${userName}/repos`))).json();
+
       this.setState({ userBadgeInfo, userRepos, history: this.state.history.concat(userName) });
   }
 
@@ -61,6 +64,7 @@ class App extends Component {
     const showRepos = this.state.showRepos;
     const openDrawer = this.state.openDrawer;
     const history = this.state.history;
+
     return (
       <div className="App">
         <Header history={history} handleUserName={this.handleUserName} handleDrawer={this.handleDrawer} openDrawer={openDrawer }fetchUserInfo={this.fetchUserInfo} userName={userName} userPic={userPic}/>

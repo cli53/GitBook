@@ -57,7 +57,7 @@ const Badge = ({ userBadgeInfo, showRepos }) => {
         <p>{`Following: ${following}`}</p>
         <RaisedButton
           target="_blank"
-          label="Github Link"
+          label="Repos"
           secondary={true}
           onClick={showRepos}
         />
