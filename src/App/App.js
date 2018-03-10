@@ -27,6 +27,7 @@ import React, { Component } from 'react';
 import Header from '../components/Header/Header.jsx';
 import Badge from '../components/Badge/Badge.jsx';
 import RepoList from '../components/RepoList/RepoList.jsx';
+import Routes from '../Routes.jsx';
 import styles from './App.scss';
 
 console.log(styles)
@@ -81,6 +82,7 @@ class App extends Component {
 
     return (
       <div className={styles.app}>
+        <Routes/>
         <Header history={history} handleUserName={this.handleUserName} handleDrawer={this.handleDrawer} openDrawer={openDrawer }fetchUserInfo={this.fetchUserInfo} userName={userName} userPic={userPic}/>
         {showBadge > 0 && <Badge showRepos={this.showRepos} userBadgeInfo={userBadgeInfo} />}
         {showRepos && <RepoList userRepos={userRepos} />}

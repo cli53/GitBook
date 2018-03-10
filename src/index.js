@@ -15,13 +15,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 import Application from './App/App';
+import { BrowserRouter as Router } from 'react-router-dom'; 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import registerServiceWorker from './registerServiceWorker';
 
 const App = () => (
+  // <Router>
   <MuiThemeProvider>
-    <Application/>
+      <Application/>
   </MuiThemeProvider>
+  // </Router>
 );
 
 ReactDOM.render(<App />, document.getElementById('root'));
