@@ -10,10 +10,10 @@
  * Copyright 2018 - 2018 cli53, Personal
  */
 
-import React from 'react';
+// import React from 'react';
 
-const Login = () => {
-  return 'hello';
-}
+// const Login = () => {
+//   return 'hello';
+// }
  
-export default Login;
+// export default Login;

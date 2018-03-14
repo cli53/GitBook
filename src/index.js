@@ -16,11 +16,12 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import Application from './App/App';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+// Includes a service worker so that your app loads from local cache on future 
 import registerServiceWorker from './registerServiceWorker';
 
 const App = () => (
   <MuiThemeProvider>
-    <Application/>
+      <Application/>
   </MuiThemeProvider>
 );
 

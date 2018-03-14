@@ -32,7 +32,7 @@ const RepoItem = ({ repoInfo }) => {
     const inlineStyle ={
       title: {
         marginLeft: 45,
-        fontSize: 20
+        fontSize: 20,
       },
       text: {
         fontSize: 18,

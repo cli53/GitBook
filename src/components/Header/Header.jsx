@@ -31,9 +31,6 @@ import Search from '../Search/Search.jsx';
 import {Toolbar, ToolbarGroup, ToolbarTitle} from 'material-ui/Toolbar';
 import styles from './Header.scss';
 
-console.log(styles)
-
-
 const Header = ({handleUserName, userName, fetchUserInfo, userPic, handleDrawer, openDrawer, history}) => {
 
  return ( 
@@ -42,6 +39,7 @@ const Header = ({handleUserName, userName, fetchUserInfo, userPic, handleDrawer,
     <ToolbarGroup firstChild={true}>
     <IconButton 
     className={styles.menu} 
+    iconStyle={{color: 'white'}}
     tooltip="History"
     onClick={handleDrawer}>
     <Menu/>
