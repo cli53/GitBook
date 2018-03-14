@@ -9,14 +9,13 @@
  * -----
  * Copyright 2018 - 2018 cli53, Personal
  */
-
-
 import React from 'react';
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import IconButton from 'material-ui/IconButton';
 import Stars from 'material-ui/svg-icons/action/stars';
 import { yellow500 } from 'material-ui/styles/colors';
+import Flip from 'react-reveal/Flip';
 import styles from './RepoItem.scss';
 // Name, Description, Git URL, Number of Stars, Forks Count, Number of Open Issues, Repository Size
 const RepoItem = ({ repoInfo }) => {
@@ -40,6 +39,7 @@ const RepoItem = ({ repoInfo }) => {
     };
     
   return (
+    <Flip top>
     <Card id="card" className={styles.card}>
       <CardHeader
       title={name}
@@ -67,6 +67,7 @@ const RepoItem = ({ repoInfo }) => {
       {`Forks: ${forks} | Size: ${RepoSize}kb | issues: ${issues}`}
     </CardText>
     </Card>
+    </Flip>
   ) 
 }
  

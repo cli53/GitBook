@@ -15,6 +15,8 @@ import React from 'react';
 import Paper from 'material-ui/Paper';
 import RaisedButton from 'material-ui/RaisedButton';
 import styles from './Badge.scss';
+import Fade from 'react-reveal/Fade';
+
 
 const Badge = ({ userBadgeInfo, showRepos }) => {
   // User Profile Image, Name, Number of Followers, Number of people Following
@@ -27,7 +29,7 @@ const Badge = ({ userBadgeInfo, showRepos }) => {
           bio } = userBadgeInfo;
 
   return (
-        <div>
+    <Fade>
         <Paper className={styles.paper}  zDepth={1}>
         <a href={url} target="_blank">
         <img src={avatar_url} className={styles.img} alt="paper card repos"/>
@@ -44,7 +46,7 @@ const Badge = ({ userBadgeInfo, showRepos }) => {
           onClick={showRepos}
         />
         </Paper>
-        </div>
+    </Fade>
   )
 }
  
