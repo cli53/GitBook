@@ -39,6 +39,7 @@ const RepoItem = ({ repoInfo }) => {
     };
     
   return (
+    <div style={{overflow: 'hidden'}}>
     <Flip top>
     <Card id="card" className={styles.card}>
       <CardHeader
@@ -68,6 +69,7 @@ const RepoItem = ({ repoInfo }) => {
     </CardText>
     </Card>
     </Flip>
+    </div>
   ) 
 }
  
