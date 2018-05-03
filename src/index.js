@@ -20,6 +20,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import registerServiceWorker from './registerServiceWorker';
 
 const App = () => (
+  // Inject material theme into  application context
   <MuiThemeProvider>
       <Application/>
   </MuiThemeProvider>
