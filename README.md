@@ -5,6 +5,8 @@ An React Application to find and keep updated with your favorite Github user
 
 ![Preview GIF](https://i.imgur.com/zgHaQfv.gif)
 
+*Pixel glitches are caused by the GIF recorder*
+
 ## Screenshot
 
 ![Image of CLI](https://image.ibb.co/kGUqyS/Screen_Shot_2018_03_07_at_12_04_26_PM.png)
