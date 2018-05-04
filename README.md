@@ -1,6 +1,12 @@
 # Gitbook
 An React Application to find and keep updated with your favorite Github user
 
+## Preview
+
+![Preview GIF](https://i.imgur.com/zgHaQfv.gif)
+
+## Screenshot
+
 ![Image of CLI](https://image.ibb.co/kGUqyS/Screen_Shot_2018_03_07_at_12_04_26_PM.png)
 
 # Installation
